@@ -14,5 +14,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'scrooloose/NERDTree'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
-
+    " Themes
+    " onedark theme
+    Plug 'joshdick/onedark.vim' 
+    " nord theme
+    Plug 'nordtheme/vim'
+    
 call plug#end()
