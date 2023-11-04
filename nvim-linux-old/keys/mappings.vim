@@ -1,10 +1,6 @@
-" v for omnicomplete
+v for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
-
-" List directories by toggling with NERTTREEToggle
-nnoremap <c-t> :NERDTreeToggle<CR>
-inoremap <c-t> <Esc> :NERDTreeToggle<CR>
 
 " Use alt + hjkl to resize windows
 nnoremap <M-j>    :resize -2<CR>
@@ -30,8 +26,6 @@ nnoremap <c-w> viw
 nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
-" List total buffers
-nnoremap <c-b> :buffers<CR>
 
 " Alternate way to save
 nnoremap <C-s> :w<CR>
@@ -53,4 +47,3 @@ nnoremap <C-l> <C-w>l
 " Leader key is "\" by default
 " nnoremap <Leader>o o<Esc>^Da
 " nnoremap <Leader>O O<Esc>^Da
-
