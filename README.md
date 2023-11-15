@@ -1,6 +1,7 @@
 # .dotfiles
 
-## Neovim config
+## lsp config
+Add server if needed from [here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
 
 ### Nvim
 This is the advanced neovim config using `lsp`, `packer.nvim` packer manager. This is configured using the `NvChad` distro.
