@@ -1,2 +1,2 @@
 require("prime.remap")
-print("Hello from Raihan")
+require("prime.set")

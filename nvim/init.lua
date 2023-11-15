@@ -1,5 +1,2 @@
 
-print("hello")
-
-require("prime.remap")
-require("prime.set")
+require("prime")
