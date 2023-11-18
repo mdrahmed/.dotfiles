@@ -8,6 +8,12 @@ This is the advanced neovim config using `lsp`, `packer.nvim` packer manager. Th
 Directory: `nvim`
 [Note: configure lsp properly. It is not configured well]
 
+### Requirements
+```
+nodejs
+npm # version > 18
+```
+
 ### Nvim-basic
 This is the basic nvim, I used at the beginning. This neovim config is present in the `nvim` directory.
 Followed these sites:
