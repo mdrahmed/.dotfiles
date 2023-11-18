@@ -13,6 +13,15 @@ Directory: `nvim`
 nodejs
 npm # version > 18
 ```
+Install `npm` from source,
+```
+sudo apt upgrade && sudo apt update
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+source ~/.bashrc
+nvm install node
+node -v
+npm -v
+```
 
 ### Nvim-basic
 This is the basic nvim, I used at the beginning. This neovim config is present in the `nvim` directory.
