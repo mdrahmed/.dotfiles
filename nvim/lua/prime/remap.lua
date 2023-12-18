@@ -1,6 +1,12 @@
 -- Enabling '<space>' as leader key
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+--vim.keymap.set("n", "<leader>l", vim.cmd.Lex)
+vim.keymap.set("n", "<leader>l", ":Lex!<CR>")
+
+-- exit faster
+vim.keymap.set("i", "jk", "<Esc>")
+vim.keymap.set("i", "kj", "<Esc>")
 
 -- :tabedit - create tabs -- following command will open file in another vim-tab, just give filename
 vim.keymap.set("n", "<leader>tn",":tabedit ")
@@ -10,6 +16,18 @@ vim.keymap.set("n", "<leader>tn",":tabedit ")
 -- :mksession - create session, following command will create a new session, just add <filename.vim>
 vim.keymap.set("n", "<leader>mk", ":mksession ")
 -- `nv -S filename.vim` to open session
+
+-- resize windows >,< key for widths
+vim.keymap.set("n", "<leader>.", ":vertical resize +2<CR>")
+vim.keymap.set("n", "<leader>,", ":vertical resize -2<CR>")
+-- horizontal resize with +,- key for heights
+vim.keymap.set("n", "<leader>=", ":resize +2<CR>")
+vim.keymap.set("n", "<leader>-", ":resize -2<CR>")
+
+--vim.keymap.set("n", "<Up>", ":resize -2<CR>")
+--vim.keymap.set("n", "<Down>", ":resize +2<CR>")
+--vim.keymap.set("n", "<Left>", ":vertical resize -2<CR>")
+--vim.keymap.set("n", "<Right>", ":vertical resize +2<CR>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -57,4 +75,5 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
 
