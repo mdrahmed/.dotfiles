@@ -1,6 +1,27 @@
 -- Enabling '<space>' as leader key
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+--vim.keymap.set("n", "<leader>l", vim.cmd.Lex)
+vim.keymap.set("n", "<leader>l", ":Lex!<CR>")
+
+-- exit faster
+vim.keymap.set("i", "jk", "<Esc>")
+vim.keymap.set("i", "kj", "<Esc>")
+
+-- :tabedit - create tabs -- following command will open file in another vim-tab, just give filename
+vim.keymap.set("n", "<leader>tn",":tabedit ")
+-- vim.keymap.set("n", "<leader>t", "gt") -- goto next vim-tab
+--vim.keymap.set("n", "<leader>T", "gT") -- goto previous vim-tab
+
+-- :mksession - create session, following command will create a new session, just add <filename.vim>
+vim.keymap.set("n", "<leader>mk", ":mksession ")
+-- `nv -S filename.vim` to open session
+
+vim.keymap.set("n", "<C-Up>", ":resize +2<CR>")
+vim.keymap.set("n", "<C-Down>", ":resize -2<CR>")
+vim.keymap.set("n", "<C-[>", ":vertical resize +2<CR>")
+vim.keymap.set("n", "<C-]>", ":vertical resize -2<CR>")
+
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -18,7 +39,7 @@ vim.keymap.set("n", "<leader>svwm", function()
     require("vim-with-me").StopVimWithMe()
 end)
 
--- greatest remap ever
+-- paste contents that is yanked with <leader>y or <leader>Y
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
@@ -48,4 +69,5 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
 

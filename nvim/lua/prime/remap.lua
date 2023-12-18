@@ -1,6 +1,7 @@
 -- Enabling '<space>' as leader key
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>b", vim.cmd.Rex)
 --vim.keymap.set("n", "<leader>l", vim.cmd.Lex)
 vim.keymap.set("n", "<leader>l", ":Lex!<CR>")
 
@@ -17,17 +18,11 @@ vim.keymap.set("n", "<leader>tn",":tabedit ")
 vim.keymap.set("n", "<leader>mk", ":mksession ")
 -- `nv -S filename.vim` to open session
 
--- resize windows >,< key for widths
-vim.keymap.set("n", "<leader>.", ":vertical resize +2<CR>")
-vim.keymap.set("n", "<leader>,", ":vertical resize -2<CR>")
--- horizontal resize with +,- key for heights
-vim.keymap.set("n", "<leader>=", ":resize +2<CR>")
-vim.keymap.set("n", "<leader>-", ":resize -2<CR>")
+vim.keymap.set("n", "<C-Up>", ":resize +2<CR>")
+vim.keymap.set("n", "<C-Down>", ":resize -2<CR>")
+vim.keymap.set("n", "<C-[>", ":vertical resize +2<CR>")
+vim.keymap.set("n", "<C-]>", ":vertical resize -2<CR>")
 
---vim.keymap.set("n", "<Up>", ":resize -2<CR>")
---vim.keymap.set("n", "<Down>", ":resize +2<CR>")
---vim.keymap.set("n", "<Left>", ":vertical resize -2<CR>")
---vim.keymap.set("n", "<Right>", ":vertical resize +2<CR>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
