@@ -1,12 +1,21 @@
 -- Enabling '<space>' as leader key
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>b", vim.cmd.Rex)
 --vim.keymap.set("n", "<leader>l", vim.cmd.Lex)
 vim.keymap.set("n", "<leader>l", ":Lex!<CR>")
 
 -- exit faster
 vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("i", "kj", "<Esc>")
+
+-- move between buffers
+vim.keymap.set("n", "<C-b>", "<cmd>bnext<CR>", opts)
+vim.keymap.set("n", "<C-m>", "<cmd>bprev<CR>", opts)
+-- :ls or :buffers or :files will list buffers
+vim.keymap.set("n", "<C-l>", "<cmd>buffers<CR>", opts)
+-- move to next file
+vim.keymap.set("n", "<C-nf>", "<cmd>next<CR>", opts)
 
 -- :tabedit - create tabs -- following command will open file in another vim-tab, just give filename
 vim.keymap.set("n", "<leader>tn",":tabedit ")
@@ -66,8 +75,9 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
+-- To source, instead of typing :so each time just press <leader> key twice
+--vim.keymap.set("n", "<leader><leader>", function()
+--    vim.cmd("so")
+--end)
 
 

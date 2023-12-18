@@ -12,6 +12,7 @@ vim.keymap.set("i", "kj", "<Esc>")
 -- move between buffers
 vim.keymap.set("n", "<C-b>", "<cmd>bnext<CR>", opts)
 vim.keymap.set("n", "<C-m>", "<cmd>bprev<CR>", opts)
+vim.keymap.set("n", "<C-c>", "<cmd>bdelete<CR>", opts)
 -- :ls or :buffers or :files will list buffers
 vim.keymap.set("n", "<C-l>", "<cmd>buffers<CR>", opts)
 -- move to next file
@@ -58,7 +59,7 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
-vim.keymap.set("i", "<C-c>", "<Esc>")
+-- vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
